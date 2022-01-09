@@ -1,0 +1,98 @@
+[05-Sep-2020 11:59:42 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[05-Sep-2020 12:00:00 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[05-Sep-2020 12:00:10 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[05-Sep-2020 12:00:21 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[06-Sep-2020 07:17:34 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[06-Sep-2020 07:17:57 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[06-Sep-2020 07:18:32 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[06-Sep-2020 07:18:55 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[11-Sep-2020 20:29:47 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[13-Sep-2020 11:21:06 UTC] PHP Fatal error:  Trait 'Cviebrock\EloquentSluggable\Sluggable' not found in /home/bestagro/app/Menu.php on line 10
+[13-Sep-2020 11:23:32 UTC] PHP Warning:  require(/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php): failed to open stream: No such file or directory in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:23:32 UTC] PHP Warning:  require(/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php): failed to open stream: No such file or directory in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:23:32 UTC] PHP Fatal error:  require(): Failed opening required '/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:23:34 UTC] PHP Warning:  require(/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php): failed to open stream: No such file or directory in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:23:34 UTC] PHP Warning:  require(/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php): failed to open stream: No such file or directory in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:23:34 UTC] PHP Fatal error:  require(): Failed opening required '/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:23:45 UTC] PHP Warning:  require(/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php): failed to open stream: No such file or directory in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:23:46 UTC] PHP Warning:  require(/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php): failed to open stream: No such file or directory in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:23:46 UTC] PHP Fatal error:  require(): Failed opening required '/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:23:48 UTC] PHP Warning:  require(/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php): failed to open stream: No such file or directory in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:23:48 UTC] PHP Warning:  require(/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php): failed to open stream: No such file or directory in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:23:48 UTC] PHP Fatal error:  require(): Failed opening required '/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:24:06 UTC] PHP Warning:  require(/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php): failed to open stream: No such file or directory in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:24:06 UTC] PHP Warning:  require(/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php): failed to open stream: No such file or directory in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:24:06 UTC] PHP Fatal error:  require(): Failed opening required '/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:25:04 UTC] PHP Warning:  require(/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php): failed to open stream: No such file or directory in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:25:04 UTC] PHP Warning:  require(/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php): failed to open stream: No such file or directory in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[13-Sep-2020 11:25:04 UTC] PHP Fatal error:  require(): Failed opening required '/home/bestagro/vendor/composer/../uxweb/sweet-alert/src/SweetAlert/functions.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home/bestagro/vendor/composer/autoload_real.php on line 69
+[16-Sep-2020 09:58:45 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[16-Sep-2020 10:00:02 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[16-Sep-2020 10:00:49 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[16-Sep-2020 10:02:18 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 07:38:30 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 07:49:31 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 07:53:58 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 07:54:47 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 07:55:12 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 07:55:39 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 07:56:06 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 08:08:26 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 08:27:15 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 08:30:24 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 08:30:51 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 08:31:21 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 08:32:48 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 08:45:40 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 08:49:25 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 08:50:04 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 08:53:35 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[17-Sep-2020 09:10:48 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 13:04:08 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 13:08:59 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 13:10:02 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 13:11:00 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 13:12:17 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 13:13:30 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 13:14:38 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 13:17:48 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 13:25:50 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 13:28:56 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 15:07:29 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 15:07:51 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 15:08:25 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 15:09:12 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 15:09:32 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[19-Sep-2020 15:11:08 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 10:36:39 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 10:39:16 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 10:42:20 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 10:42:39 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 10:48:29 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 10:51:02 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:01:01 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:02:04 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:03:07 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:03:41 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:04:47 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:05:40 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:06:24 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:07:35 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:08:08 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:08:35 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:08:45 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:09:13 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:10:32 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:10:53 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:23:39 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:26:06 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:26:46 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:27:15 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:28:01 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:28:30 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[20-Sep-2020 11:30:31 UTC] PHP Warning:  File upload error - unable to create a temporary file in Unknown on line 0
+[11-Dec-2020 09:59:28 UTC] PHP Warning:  require(/home1/bestagro/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home1/bestagro/public_html/index.php on line 24
+[11-Dec-2020 09:59:28 UTC] PHP Warning:  require(/home1/bestagro/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home1/bestagro/public_html/index.php on line 24
+[11-Dec-2020 09:59:28 UTC] PHP Fatal error:  require(): Failed opening required '/home1/bestagro/public_html/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home1/bestagro/public_html/index.php on line 24
+[19-Sep-2021 10:02:48 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.2.5". You are running 5.6.40. in /home1/almasbea/vendor/composer/platform_check.php on line 25
+[19-Sep-2021 10:02:50 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.2.5". You are running 5.6.40. in /home1/almasbea/vendor/composer/platform_check.php on line 25
