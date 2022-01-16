@@ -59,13 +59,13 @@ class ReservationController extends Controller
         $reserations->user_id           = $request->input('user_id');
         $reserations->service_id        = $request->input('service_id');
         $reserations->subservice_id     = $request->input('subservice_id');
+        $reserations->dateset           = $request->input('dateset');
 
         $reserations->save();
 
         $user = User::whereId($request->input('user_id'))->first();
-        $service = Service::whereId($request->input('service_id'))->first();
-
-        $user->notify(new SendSmsNotification($service->title ,  $user->phone , $user->name));
+        $dateset = $request->input('dateset');
+        $user->notify(new SendSmsNotification($dateset ,  $user->phone , $user->name));
 
         return back();
     }

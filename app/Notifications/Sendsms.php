@@ -11,7 +11,7 @@ class Sendsms extends Notification
 
     use Queueable;
 
-    public $title;
+    public $dateset;
     public $name;
     public $phone;
     /**
@@ -20,9 +20,9 @@ class Sendsms extends Notification
      * @return void
      */
 
-    public function __construct($title , $phone , $name)
+    public function __construct($dateset , $phone , $name)
     {
-        $this->title = $title;
+        $this->dateset = $dateset;
         $this->phone = $phone;
         $this->name = $name;
 
@@ -44,9 +44,9 @@ class Sendsms extends Notification
     public function toGhasedakSms($notifiable)
     {
         return [
-            'text' => " کاربر گرامی {$this->name} درخواست نوبت دهی شما برای {$this->title} ثبت گردید تایید درخواست شما در اسرع وقت پیامک می گردد. \n کلینیک زیبایی الماس \n دکتر غلامرضا کریمی \n almasbeauty.com",
+            //'text' => " کاربر گرامی {$this->name} درخواست نوبت دهی شما برای {$this->title} ثبت گردید تایید درخواست شما در اسرع وقت پیامک می گردد. \n کلینیک زیبایی الماس \n دکتر غلامرضا کریمی \n almasbeauty.com",
             'phone' => $this->phone,
-            'title' => $this->title,
+            'dateset' => $this->dateset,
             'name' => $this->name
         ];
     }

@@ -19,18 +19,15 @@ class GhasedakreserveChannel
 
         $data = $notification->toGhasedakSms($notifiable);
 
-
-        $message = $data['text'];
         $receptor = $data['phone'];
-        $title = $data['title'];
-        $name = $data['name'];
-        $lineNumber = "2000235";
+        $dateset = $data['dateset'];
         $apiKey = config('services.ghasedak.key');
 
         try
         {
             $api = new GhasedakApi($apiKey);
-            $api->Verify($receptor,1,'almasreserve',$title,$name);
+            $api->Verify($receptor,1,'almasreserve',$dateset);
+            $api->Verify('09128119938',1,'adminalmas',$dateset);
 
         }
         catch(ApiException $e){

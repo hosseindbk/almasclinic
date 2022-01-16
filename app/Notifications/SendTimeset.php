@@ -11,8 +11,6 @@ class SendTimeset extends Notification
 
     use Queueable;
 
-    public $title;
-    public $name;
     public $phone;
     public $dateset;
     public $timeset;
@@ -21,11 +19,9 @@ class SendTimeset extends Notification
      *
      * @return void
      */
-    public function __construct($title , $phone , $name , $dateset , $timeset)
+    public function __construct($phone , $dateset , $timeset)
     {
-        $this->title    = $title;
         $this->phone    = $phone;
-        $this->name     = $name;
         $this->dateset  = $dateset;
         $this->timeset  = $timeset;
 
@@ -46,9 +42,8 @@ class SendTimeset extends Notification
     public function toGhasedakSms($notifiable)
     {
         return [
-            'text' => " کاربر گرامی {$this->name} درخواست نوبت دهی شما توسط کارشناسان تایید و نوبت شما مورخ {$this->dateset} ساعت {$this->timeset} می باشد.\n کلینیک زیبایی الماس \n دکتر غلامرضا کریمی \n almasbeaty.com",
+            //'text' => " کاربر گرامی {$this->name} درخواست نوبت دهی شما توسط کارشناسان تایید و نوبت شما مورخ {$this->dateset} ساعت {$this->timeset} می باشد.\n کلینیک زیبایی الماس \n دکتر غلامرضا کریمی \n almasbeaty.com",
             'phone' => $this->phone,
-            'name' => $this->name,
             'dateset' => $this->dateset,
             'timeset' => $this->timeset
         ];

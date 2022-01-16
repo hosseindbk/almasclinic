@@ -70,19 +70,17 @@ class ReservationController extends Controller
 
         $user       = User::whereId($request->input('user_id'))->first();
         if($request->input('service_id') != null) {
-            $service = Service::whereId($request->input('service_id'))->first();
             $dateset = $request->input('dateset');
             $timeset = $request->input('timeset');
             if ($request->input('status') == 1) {
-                $user->notify(new SendTimesetNotification($service->title, $user->phone, $user->name, $dateset, $timeset));
+                $user->notify(new SendTimesetNotification($user->phone, $dateset, $timeset));
             }
         }
         if($request->input('package_id') != null) {
-            $package = Package::whereId($request->input('package_id'))->first();
             $dateset = $request->input('dateset');
             $timeset = $request->input('timeset');
             if ($request->input('status') == 1) {
-                $user->notify(new SendTimesetNotification($package->title, $user->phone, $user->name, $dateset, $timeset));
+                $user->notify(new SendTimesetNotification($user->phone, $dateset, $timeset));
             }
         }
 
