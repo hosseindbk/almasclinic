@@ -27,7 +27,7 @@ class GhasedakreserveChannel
         {
             $api = new GhasedakApi($apiKey);
             $api->Verify($receptor,1,'almasreserve',$dateset);
-            $api->Verify('09128119938',1,'adminalmas',$dateset);
+            $api->Verify('09102205889',1,'adminalmas',$dateset);
 
         }
         catch(ApiException $e){
