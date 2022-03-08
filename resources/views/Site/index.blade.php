@@ -30,11 +30,11 @@
             <div class="col-lg-6">
                 <div class="almas-img-contant">
                     <div class="almas-banner-img" style="text-align: left">
-                        <img src="{{asset('site/images/almas-img/almas-banner-img1.jpg')}}" alt="کلینیک زیبایی دکتر غلامرضا کریمی">
+                        <img  src="{{asset('site/images/almas-img/almas-banner-img1.jpg')}}" title="کلینیک زیبایی دکتر غلامرضا کریمی" alt="کلینیک زیبایی دکتر غلامرضا کریمی">
                     </div>
                     <div class="almas-shape1">
-                        <img src="{{asset('site/images/shape/shape13.png')}}" class="shape-13" alt="کلینیک زیبایی دکتر غلامرضا کریمی">
-                        <img src="{{asset('site/images/shape/shape15.png')}}" class="shape-15" alt="کلینیک زیبایی دکتر غلامرضا کریمی">
+                        <img  src="{{asset('site/images/shape/shape13.png')}}" class="shape-13"  title="کلینیک زیبایی دکتر غلامرضا کریمی" alt="کلینیک زیبایی دکتر غلامرضا کریمی">
+                        <img  src="{{asset('site/images/shape/shape15.png')}}" class="shape-15"  title="کلینیک زیبایی دکتر غلامرضا کریمی" alt="کلینیک زیبایی دکتر غلامرضا کریمی">
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
             @foreach($services as $service)
                 <div class="col-lg-4 col-sm-6">
                     <div class="case-study-card">
-                        <img src="{{asset($service->images)}}" alt="{{$service->title}}" title="{{$service->title}}">
+                        <img  src="{{asset('site/images/logo-white.png')}}" class="lazy" data-src="{{asset($service->images)}}"  title="{{$service->title}}" alt="{{$service->title}}">
                         <div style="padding: 15px 25px; position: absolute; left: 0; top: 40%; width: 100%; text-align: center;background-color: #00000042;">
                         <a href="{{url('services/'.$service->slug)}}"  target="blank">
                             <h3 class="study-text" style="color: #fff;">{{$service->title}}</h3>
@@ -146,8 +146,9 @@
                     <div class="section-title">
                         <h2>چرا کلینیک زیبایی الماس</h2>
                     </div>
-                    <div class="choose-us-img">
-                        <img src="{{asset('site/images/almas-img/choose-us-1.jpg')}}" alt="کلینیک زیبایی دکتر غلامرضا کریمی">
+                    <div class="choose-us-img" >
+                        <img  src="{{asset('site/images/logo-white.png')}}" class="lazy" data-src="{{asset('site/images/almas-img/choose-us-1.jpg')}}"  title="کلینیک زیبایی دکتر غلامرضا کریمی" alt="کلینیک زیبایی دکتر غلامرضا کریمی">
+
 <!--                        <div class="choose-img">-->
 <!--                            <img src="assets/images/almas-img/choose-us-2.png" alt="Image">-->
 <!--                        </div>-->
@@ -214,7 +215,7 @@
         <div class="testimonials-slider owl-carousel owl-theme">
             @foreach($blogs as $blog)
             <div class="testimonials-slider-item">
-                <img src="{{asset($blog->image)}}" alt="دانستنی های کلینیک زیبایی الماس" style="width: 75px;height: 75px;">
+                <img  src="{{asset('site/images/logo-white.png')}}" class="lazy we-are-img" style="width: 75px;height: 75px;" data-src="{{asset($blog->image)}}" title="دانستنی های کلینیک زیبایی الماس" alt="دانستنی های کلینیک زیبایی الماس">
                 <h3>{{$blog->name}}</h3>
                 <p class="text-justify">{{$blog->description}}</p>
             </div>
@@ -230,7 +231,7 @@
                     <h2>درباره کلینیک زیبایی الماس</h2>
                 </div>
                 <div class="who-we-are-text">
-                    <p class="text-justify">كلينيك زيبايي الماس با دریافت مجوز در سال ١٣٩٨ فعاليت خود را در قالب كلينيك زيبايي پوست و مو به صورت رسمي با مديريت دكتر غلام رضا كريمي آغاز كرد . دكتر غلام رضا كريمي فارغ التحصيل سال ١٣٧٥ مي باشد . شروع فعاليت در زمينه پوست و زيبايي در سال ١٣٧٩ آغاز گرديد و از سال ٩٦ فعاليت در زمينه استتيك در تهران شروع كردند كه در ابتدا در قالب همكاري با ديگر همكاران شكل گرفته است .
+                    <p class="text-justify">كلينيك زيبايي الماس با دریافت مجوز در سال ١٣٩٨ فعاليت خود را در قالب كلينيك زيبايي پوست و مو به صورت رسمي با مديريت دكتر غلام رضا كريمي آغاز كرد . دكتر غلام رضا كريمي فارغ التحصيل سال ١٣٧٥ مي باشد . شروع فعاليت  در زمينه پوست و زيبايي در سال ١٣٧٩ آغاز گرديد و از سال ٩٦ فعاليت در زمينه  استتيك در تهران شروع كردند كه در  ابتدا در قالب همكاري با ديگر همكاران شكل گرفته است .
 
                         خدمات زيبايي كلينيك الماس شامل موارد ذيل مي باشد :<br>
                         ١- تزريق بوتاكس<br>
@@ -246,7 +247,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="who-we-are-img bg-color">
-                    <img src="{{asset('site/images/almas-img/who-we-are-img.jpg')}}" class="we-are-img" alt="کلینیک زیبایی دکتر غلامرضا کریمی">
+                    <img  src="{{asset('site/images/logo-white.png')}}" class="lazy we-are-img" data-src="{{asset('site/images/almas-img/who-we-are-img.jpg')}}"   title="کلینیک زیبایی دکتر غلامرضا کریمی" alt="کلینیک زیبایی دکتر غلامرضا کریمی">
                 </div>
             </div>
         </div>

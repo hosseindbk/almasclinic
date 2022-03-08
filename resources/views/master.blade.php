@@ -20,13 +20,6 @@
 </head>
 <body data-spy="scroll" data-offset="70">
 
-<div class="preloader">
-    <div class="d-table">
-        <div class="d-table-cell">
-            <div class="lds-hourglass"></div>
-        </div>
-    </div>
-</div>
 
 <nav class="navbar fixed-top navbar-expand-md main-navbar almas-nav" style="background-color: #313030;">
     <div class="container">
@@ -214,6 +207,37 @@
                     "logo" : "https://almasbeauty.com/site/images/logo.png",
                     "sameAs" : [ "https://www.instagram.com/dr.karimi.reza" ]
                 }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var lazyloadImages = document.querySelectorAll("img.lazy");
+        var lazyloadThrottleTimeout;
+
+        function lazyload () {
+            if(lazyloadThrottleTimeout) {
+                clearTimeout(lazyloadThrottleTimeout);
+            }
+
+            lazyloadThrottleTimeout = setTimeout(function() {
+                var scrollTop = window.pageYOffset;
+                lazyloadImages.forEach(function(img) {
+                    if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                    }
+                });
+                if(lazyloadImages.length == 0) {
+                    document.removeEventListener("scroll", lazyload);
+                    window.removeEventListener("resize", lazyload);
+                    window.removeEventListener("orientationChange", lazyload);
+                }
+            }, 20);
+        }
+
+        document.addEventListener("scroll", lazyload);
+        window.addEventListener("resize", lazyload);
+        window.addEventListener("orientationChange", lazyload);
+    });
 </script>
 </body>
 </html>
