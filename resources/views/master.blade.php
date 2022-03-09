@@ -41,7 +41,7 @@
                 @endforeach
             </ul>
             <div class="nav-btn" style="margin: 10px">
-                <a href="tel:+989102205889" id="phonenumber" class="btn btn-secondary">پشتیبانی : 09102205889</a>
+                <a href="tel:+989102205889" id="phonenumber" class="btn btn-secondary">مشاوره : 09102205889</a>
             </div>
             @if(! Auth::check())
             <div class="nav-btn">

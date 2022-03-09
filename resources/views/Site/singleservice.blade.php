@@ -24,12 +24,12 @@
                         <img src="{{asset($service->images)}}" alt="{{$service->title}}" style="max-width: 400px;">
                     </div>
                     <div>
-                        <h1>{{$service->title}}</h1>
+                        <h1 style="text-align: center">{{$service->title}}</h1>
                         <p>{!! $service->description !!}</p>
                     </div>
 
                     <div class="case-study-card text-center">
-                        <h4>نمونه کارهای کلینیک الماس</h4>
+                        <h4> نمونه {{$server->title}} کلینیک الماس </h4>
                     </div>
                 </div>
             @endforeach
