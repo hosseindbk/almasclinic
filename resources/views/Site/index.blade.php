@@ -18,7 +18,7 @@
 <div class="almas-banner-area pb-100">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6" style="text-align: center;">
                 <div class="almas-banner-text">
                     <h1>کلینیک زیبایی الماس دکتر غلامرضا کریمی</h1>
                     <p>کلینیک تخصصی زیبایی الماس با مدیریت دکتر غلامرضا کریمی <br> جهت مشاوره زیبایی با ما تماس حاصل فرمایید و یا جهت تعیین وقت از طریق لینک زیر به صورت آنلاین نوبت دریافت نمایید .</p>

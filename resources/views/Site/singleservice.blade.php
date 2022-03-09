@@ -29,7 +29,7 @@
                     </div>
 
                     <div class="case-study-card text-center">
-                        <h4> نمونه {{$server->title}} کلینیک الماس </h4>
+                        <h4> نمونه {{$service->title}} کلینیک الماس </h4>
                     </div>
                 </div>
             @endforeach
