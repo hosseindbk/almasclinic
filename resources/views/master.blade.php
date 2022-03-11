@@ -43,15 +43,15 @@
                 <a href="tel:+989102205889" id="phonenumber" class="btn btn-secondary">مشاوره : 09102205889</a>
             </div>
             @if(! Auth::check())
-            <div class="nav-btn">
-                <a href="{{url('login')}}" class="btn btn-secondary">ورود/عضویت</a>
-            </div>
-                @elseif(Auth::check())
+                <div class="nav-btn">
+                    <a href="{{url('login')}}" class="btn btn-secondary">ورود/عضویت</a>
+                </div>
+            @elseif(Auth::check())
                 <div class="nav-btn" style="color: #fff;margin: 0 10px;">
                     <a href="{{url('logout')}}">{{auth::user()->name}} عزیز</a>
 
                 </div>
-                @endif
+            @endif
 
         </div>
     </div>
@@ -115,12 +115,12 @@
                             <h3 class="title">خدمات کلینیک الماس</h3>
                             <ul class="footer-text">
                                 @foreach($service_link as $service)
-                                <li>
-                                    <a href="{{url('services/'.$service->slug)}}">
-                                        <i class="las la-angle-left"></i>
-                                        {{$service->title}}
-                                    </a>
-                                </li>
+                                    <li>
+                                        <a href="{{url('services/'.$service->slug)}}">
+                                            <i class="las la-angle-left"></i>
+                                            {{$service->title}}
+                                        </a>
+                                    </li>
                                 @endforeach
                             </ul>
                         </div>
@@ -211,12 +211,10 @@
     document.addEventListener("DOMContentLoaded", function() {
         var lazyloadImages = document.querySelectorAll("img.lazy");
         var lazyloadThrottleTimeout;
-
         function lazyload () {
             if(lazyloadThrottleTimeout) {
                 clearTimeout(lazyloadThrottleTimeout);
             }
-
             lazyloadThrottleTimeout = setTimeout(function() {
                 var scrollTop = window.pageYOffset;
                 lazyloadImages.forEach(function(img) {
@@ -232,7 +230,6 @@
                 }
             }, 20);
         }
-
         document.addEventListener("scroll", lazyload);
         window.addEventListener("resize", lazyload);
         window.addEventListener("orientationChange", lazyload);

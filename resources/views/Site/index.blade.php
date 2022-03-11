@@ -30,7 +30,7 @@
             <div class="col-lg-6">
                 <div class="almas-img-contant">
                     <div class="almas-banner-img" style="text-align: left">
-                        <img  src="{{asset('site/images/almas-img/almas-banner-img1.jpg')}}" title="کلینیک زیبایی دکتر غلامرضا کریمی" alt="کلینیک زیبایی دکتر غلامرضا کریمی">
+                        <img  src="{{asset('site/images/almas-img/drkarimi.jpg')}}" title=" دکتر غلامرضا کریمی" alt=" دکتر غلامرضا کریمی">
                     </div>
                     <div class="almas-shape1">
                         <img  src="{{asset('site/images/shape/shape13.png')}}" class="shape-13"  title="کلینیک زیبایی دکتر غلامرضا کریمی" alt="کلینیک زیبایی دکتر غلامرضا کریمی">
