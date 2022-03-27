@@ -2,7 +2,7 @@
 @section('header')
     @foreach($services as $service)
     <meta name="description" content="{!! $service->description !!}">
-    <meta name="keyword" content="کلینیک زیبایی الماس، دکتر غلام رضا كريمي، تزريق بوتاكس، تزريق فيلر، مزوتراپي، ميكرونيدلينگ، تزريق چربي، پي آر پي، كاشت نخ، خدمات ليزر">
+    <meta name="keywords" content="کلینیک زیبایی الماس، دکتر غلام رضا كريمي، تزريق بوتاكس، تزريق فيلر، مزوتراپي، ميكرونيدلينگ، تزريق چربي، پي آر پي، كاشت نخ، خدمات ليزر">
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="کلینیک زیبایی الماس-{{$service->title}}" />
     <meta name="twitter:description" content="{!! $service->description !!}" />
