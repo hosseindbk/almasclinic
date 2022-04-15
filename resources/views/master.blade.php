@@ -15,10 +15,20 @@
     <link rel="stylesheet" href="{{asset('site/css/rtl.css')}}">
     <link rel="icon" type="images/png" href="{{asset('site/images/favicon.png')}}">
     <meta name="ahrefs-site-verification" content="abfb467b50f7408c06e4937eaa760a8bbb8000ae898cdacd4760b68123c4d157">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WBT7ZQV');</script>
+    <!-- End Google Tag Manager -->
     @yield('header')
 </head>
 <body data-spy="scroll" data-offset="70">
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBT7ZQV"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <nav class="navbar fixed-top navbar-expand-md main-navbar almas-nav" style="background-color: #313030;">
     <div class="container">
