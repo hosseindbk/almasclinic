@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{asset('site/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('site/css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('site/css/rtl.css')}}">
-    <link rel="icon" type="images/png" href="{{asset('site/images/favicon.png')}}">
+    <link rel="icon" type="images/png" href="{{asset('site/images/logo.png')}}">
     <link rel="canonical" href="{{URL::current()}}" />
     <meta name="ahrefs-site-verification" content="abfb467b50f7408c06e4937eaa760a8bbb8000ae898cdacd4760b68123c4d157">
     <!-- Google Tag Manager -->
