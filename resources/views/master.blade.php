@@ -153,21 +153,77 @@
         </div>
     </div>
 </footer>
-<div class="call-whatsapp" style="
-        display: inline;
-        bottom: 50px;
-        left: 30px;
-        position: fixed;
-        z-index: 99999999;">
-    <div class="bg-whatsapp" style="background-color: #be00f8;
-    border-radius: 15px;
-    padding: 3px 12px;">
-
+<div class="call-whatsapp" style="display: inline;bottom: 150px;left: 30px;position: fixed;z-index: 99999999;">
+    <div class="bg-whatsapp" style="background-color: #be00f8;border-radius: 15px;padding: 3px 12px;">
         <a href="tel:+989102205889" style="color: #fff;">
             تماس باما
         </a>
     </div>
+</div>
+<div class="call-banner d-none d-sm-block" style="display: inline;bottom: 25%;right: 0px;position: fixed;z-index: 99999999;">
+    <div class="bg-banner" style="background-color: #be00f8;padding: 3px 12px;">
+        @foreach($ads as $ad)
+            @if($ad->position == 2)<a href="{{url($ad->url)}}">
+                <div style="text-align: center">
+                    <p style="color: #fff;text-align: center;padding: 20px 2px;">{{$ad->title}}</p>
+                </div>
+                <div style="text-align: center">
+                    <img src="{{asset($ad->image)}}" style="width: 100px" alt="">
+                </div>
+            </a>
+            @endif
+        @endforeach
+    </div>
+    <br>
+    <div class="bg-banner" style="background-color: #be00f8;padding: 3px 12px;">
+        @foreach($ads as $ad)
+            @if($ad->position == 2)<a href="{{url($ad->url)}}">
+                <div style="text-align: center">
+                    <p style="color: #fff;text-align: center;padding: 20px 2px;">{{$ad->title}}</p>
+                </div>
+                <div style="text-align: center">
+                    <img src="{{asset($ad->image)}}" style="width: 100px" alt="">
+                </div>
+            </a>
+            @endif
+        @endforeach
+    </div>
+</div>
+{{--<div class="call-banner d-none d-sm-block" style="display: inline;bottom: 380px;right: 0px;position: fixed;z-index: 99999999;">--}}
+{{--    <div class="bg-banner" style="background-color: #be00f8;padding: 3px 12px;">--}}
+{{--        @foreach($ads as $ad)--}}
+{{--            @if($ad->position == 2)<a href="{{url($ad->url)}}">--}}
+{{--                <div style="text-align: center">--}}
+{{--                    <p style="color: #fff;text-align: center;padding: 20px 2px;">{{$ad->title}}</p>--}}
+{{--                </div>--}}
+{{--                <div style="text-align: center">--}}
+{{--                    <img src="{{asset($ad->image)}}" style="width: 100px" alt="">--}}
+{{--                </div>--}}
+{{--            </a>--}}
+{{--            @endif--}}
+{{--        @endforeach--}}
+{{--    </div>--}}
+{{--</div>--}}
 
+<div class="row">
+    <div class="container">
+        <div class="col-1"></div>
+        <div class="col-10">
+            @foreach($ads as $ad)
+                @if($ad->position == 1)
+
+                    <a href="{{url($ad->url)}}">
+                        <div style="position: fixed;bottom: 0;height: 70px;background: #be00f8d9;right: 0;left: 0;margin: 0 auto;z-index: 1;">
+                            <div class="col-4" style="float: right"><img src="{{asset($ad->image)}}" alt="" style="height: 70px"></div>
+                            <div class="col-8" style="float: left"><p style="color: #fff;text-align: center;margin: 15px;">{{$ad->title}}</p></div>
+                        </div>
+                    </a>
+
+                @endif
+            @endforeach
+        </div>
+        <div class="col-1"></div>
+    </div>
 </div>
 <script src="{{asset('site/js/jquery.min.js')}}"></script>
 <script src="{{asset('site/js/popper.min.js')}}"></script>

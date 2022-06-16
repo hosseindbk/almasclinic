@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Site;
 
+use App\Ads;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\reservationrequest;
 use App\Menu;
@@ -28,6 +29,7 @@ class ReservationController extends Controller
         $subservices    = Subservice::whereStatus(1)->get();
         $packages       = Package::whereStatus(1)->get();
         $reservations   = Reseration::latest()->get();
+        $ads            = Ads::all();
 
         return view('Site.reservation')
             ->with(compact('service_link'))
@@ -35,6 +37,7 @@ class ReservationController extends Controller
             ->with(compact('subservices'))
             ->with(compact('reservations'))
             ->with(compact('services'))
+            ->with(compact('ads'))
             ->with(compact('menus'));
     }
     public function packagereserve($id){
@@ -45,11 +48,13 @@ class ReservationController extends Controller
         $service_link       = Service::select('title' , 'slug')->get();
         $packages           = Package::whereId($id)->get();
         $reservations       = Reseration::latest()->get();
+        $ads                = Ads::all();
 
         return view('Site.packagereserve')
             ->with(compact('service_link'))
             ->with(compact('packages'))
             ->with(compact('reservations'))
+            ->with(compact('ads'))
             ->with(compact('menus'));
     }
 
