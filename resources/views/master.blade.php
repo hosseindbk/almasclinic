@@ -159,6 +159,12 @@
             تماس باما
         </a>
     </div>
+    <br>
+    <div class="bg-whatsapp" style="background-color: #be00f8;border-radius: 15px;padding: 3px 12px;">
+        <a href="{{url('/')}}" style="color: #fff;">
+            رزرو آنلاین
+        </a>
+    </div>
 </div>
 <div class="call-banner d-none d-sm-block" style="display: inline;bottom: 25%;right: 0px;position: fixed;z-index: 99999999;">
     <div class="bg-banner" style="background-color: #be00f8;padding: 3px 12px;">

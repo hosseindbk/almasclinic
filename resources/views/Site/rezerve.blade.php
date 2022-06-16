@@ -37,11 +37,6 @@
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <p class="mg-b-10">نام و نام خانوادگی</p>
-                            <input type="hidden" name="user_id" data-required="1" value="{{Auth::user()->id}}" class="form-control" />
-                            <input type="text" disabled value="{{Auth::user()->name}}" class="form-control" />
-                        </div>
-                        <div class="form-group">
                             <p class="mg-b-10">نوع خدمات</p>
                             <select name="service_id" id="service_id" class="form-control select-lg select2">
                                 <option value="" >یکی را انتخاب کنید</option>
@@ -62,93 +57,12 @@
                             <input type="text" name="dateset" class="form-control fc-datepicker" autocomplete="off" placeholder="روز / ماه / سال" >
                         </div>
                     </div>
-                <div class="col-lg-12 mg-b-10 text-center">
+                    <div class="col-lg-12 mg-b-10 text-center">
                         <div class="form-group">
                             <button type="submit" class="btn btn-info  btn-lg m-r-20">ارسال درخواست</button>
                         </div>
                     </div>
             </form>
-            <div class="table-responsive">
-                <table class="table" id="example1">
-                    <thead>
-                    <tr>
-                        <th class="wd-10p"> ردیف </th>
-                        <th class="wd-10p">عنوان خدمات </th>
-                        <th class="wd-10p"> زیرمجموعه خدمات </th>
-                        <th class="wd-10p"> پکیج </th>
-                        <th class="wd-10p"> زمان حضور </th>
-                        <th class="wd-10p"> وضعیت درخواست </th>
-                        <th class="wd-10p"> زمان درخواست </th>
-                        <th class="wd-10p"> حذف درخواست </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php $x= 1; ?>
-                    @foreach($reservations as $reservation)
-                        @if($reservation->user_id == auth::user()->id)
-                        <tr>
-                            <td>{{$x++}}</td>
-
-                            <td>
-                                @foreach($services as $service)
-                                    @if($service->id == $reservation->service_id)
-                                        {{$service->title}}
-                                    @endif
-                                @endforeach
-                            </td>
-
-                            <td>
-                                @foreach($subservices as $subservice)
-                                    @if($subservice->id == $reservation->subservice_id)
-                                        {{$subservice->title}}
-                                    @endif
-                                @endforeach
-                            </td>
-
-                            <td>
-                                @foreach($packages as $package)
-                                    @if($package->id == $reservation->package_id)
-                                        {{$package->title}}
-                                    @endif
-                                @endforeach
-                            </td>
-
-                            <td>
-                                {{$reservation->dateset}} - {{$reservation->timeset}}
-                            </td>
-                            <td>
-                                @if($reservation->status == 0)
-                                    <button class="btn ripple btn-outline-warning">در حال بررسی کارشناسان</button>
-                                @elseif($reservation->status == 1)
-                                    <button class="btn ripple btn-outline-primary">تایید زمان رزرو</button>
-                                @elseif($reservation->status == 2)
-                                    <button class="btn ripple btn-outline-primary">درخواست شما انجام شده </button>
-                                @elseif($reservation->status == 3)
-                                    <button class="btn ripple btn-outline-primary">زمان تایید شده گذشته است </button>
-                                @endif
-                            </td>
-                            <td>
-                                {{jdate($reservation->created_at)->ago()}}
-                            </td>
-                            <td>
-                            @if($reservation->status == 0)
-                                <form action="{{ route('deletereserve' , $reservation->id) }}" method="post">
-                                    {{ method_field('delete') }}
-                                    {{ csrf_field() }}
-                                    <div class="btn-icon-list">
-                                        <button type="submit" class="btn ripple btn-outline-danger btn-icon">
-                                            <i class="la la-trash"></i>
-                                        </button>
-                                    </div>
-                                </form>
-                            @endif
-                            </td>
-                        </tr>
-                        @endif
-                    @endforeach
-                    </tbody>
-                </table>
-            </div>
         </div>
     </div>
 </div>

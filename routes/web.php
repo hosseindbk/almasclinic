@@ -41,6 +41,7 @@ Route::group(['namespace' => 'Site'] , function (){
     Route::post('packageset'                , 'ReservationController@packageset')->name('package-set');
     Route::post('reservation/serviceoption' , 'ReservationController@serviceoption')->name('serviceoption');
     Route::delete('reservation/delete/{id}'     , 'ReservationController@deletreserve')->name('deletereserve');
+    Route::resource('rezerve'           , 'RezerveController');
 
     Route::get('customers'                  , 'IndexController@customer');
     Route::post('counter'                   , 'IndexController@counter')->name('counter');
