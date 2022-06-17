@@ -22,7 +22,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center">نوبت دهی کلینیک زیبایی الماس دکتر رضا کریمی</h1>
+                <h1 class="text-center" style="font-size: 1.8rem;">نوبت دهی کلینیک زیبایی الماس دکتر غلارضا کریمی</h1>
             </div>
         </div>
     </div>
@@ -36,14 +36,16 @@
                         @include('error')
                     </div>
                     <div class="col-md-12">
+                        @if(Auth::check())
                         <div class="form-group">
                             <p class="mg-b-10">نام و نام خانوادگی</p>
                             <input type="hidden" name="user_id" data-required="1" value="{{Auth::user()->id}}" class="form-control" />
                             <input type="text" disabled value="{{Auth::user()->name}}" class="form-control" />
                         </div>
+                        @endif
                         <div class="form-group">
                             <p class="mg-b-10">نوع خدمات</p>
-                            <select name="service_id" id="service_id" class="form-control select-lg select2">
+                            <select name="service_id" id="service_id" class="form-control select2">
                                 <option value="" >یکی را انتخاب کنید</option>
                             @foreach($services as $service)
                                     <option value="{{$service->id}}" >{{$service->title}}</option>
@@ -52,9 +54,8 @@
                         </div>
                         <div class="form-group">
                             <p class="mg-b-10">زیر مجموعه خدمات</p>
-                            <select name="subservice_id" id="subservice_id" class="form-control select-lg select2">
+                            <select name="subservice_id" id="subservice_id" class="form-control select2">
                                 <option value="" >یکی را انتخاب کنید</option>
-
                             </select>
                         </div>
                         <div class="form-group">
@@ -68,6 +69,7 @@
                         </div>
                     </div>
             </form>
+            @if(Auth::check())
             <div class="table-responsive">
                 <table class="table" id="example1">
                     <thead>
@@ -85,7 +87,7 @@
                     <tbody>
                     <?php $x= 1; ?>
                     @foreach($reservations as $reservation)
-                        @if($reservation->user_id == auth::user()->id)
+                        @if($reservation->user_id == Auth::user()->id)
                         <tr>
                             <td>{{$x++}}</td>
 
@@ -149,6 +151,7 @@
                     </tbody>
                 </table>
             </div>
+            @endif
         </div>
     </div>
 </div>

@@ -26,6 +26,7 @@
                                             <div class="form-account-title">
                                                 <label for="email-phone"> نام و نام خانوادگی</label>
                                                 <input type="text" name="name" class="text-right number-email-input" >
+                                                <input type="hidden" name="level" value="user" >
                                             </div>
                                             <div class="form-account-title">
                                                 <label for="email-phone"> شماره موبایل</label>

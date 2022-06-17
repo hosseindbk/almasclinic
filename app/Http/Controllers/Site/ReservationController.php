@@ -21,28 +21,51 @@ class ReservationController extends Controller
     public function index(){
 
         if(! Auth::check()){
-            return view('Site.auth.login');
-        }
-        $menus          = Menu::whereStatus(1)->get();
-        $services       = Service::whereStatus(1)->get();
-        $service_link   = Service::select('title' , 'slug')->get();
-        $subservices    = Subservice::whereStatus(1)->get();
-        $packages       = Package::whereStatus(1)->get();
-        $reservations   = Reseration::latest()->get();
-        $ads            = Ads::all();
+            $menus          = Menu::whereStatus(1)->get();
+            $services       = Service::whereStatus(1)->get();
+            $service_link   = Service::select('title' , 'slug')->get();
+            $subservices    = Subservice::whereStatus(1)->get();
+            $packages       = Package::whereStatus(1)->get();
+            $ads            = Ads::all();
 
-        return view('Site.reservation')
-            ->with(compact('service_link'))
-            ->with(compact('packages'))
-            ->with(compact('subservices'))
-            ->with(compact('reservations'))
-            ->with(compact('services'))
-            ->with(compact('ads'))
-            ->with(compact('menus'));
+            return view('Site.reservation')
+                ->with(compact('service_link'))
+                ->with(compact('packages'))
+                ->with(compact('subservices'))
+                ->with(compact('services'))
+                ->with(compact('ads'))
+                ->with(compact('menus'));
+        }else {
+            $menus = Menu::whereStatus(1)->get();
+            $services = Service::whereStatus(1)->get();
+            $service_link = Service::select('title', 'slug')->get();
+            $subservices = Subservice::whereStatus(1)->get();
+            $packages = Package::whereStatus(1)->get();
+            $reservations = Reseration::latest()->get();
+            $ads = Ads::all();
+
+            return view('Site.reservation')
+                ->with(compact('service_link'))
+                ->with(compact('packages'))
+                ->with(compact('subservices'))
+                ->with(compact('reservations'))
+                ->with(compact('services'))
+                ->with(compact('ads'))
+                ->with(compact('menus'));
+        }
     }
     public function packagereserve($id){
         if(! Auth::check()){
-            return view('Site.auth.login');
+            $menus              = Menu::whereStatus(1)->get();
+            $service_link       = Service::select('title' , 'slug')->get();
+            $packages           = Package::whereId($id)->get();
+            $ads                = Ads::all();
+
+            return view('Site.packagereserve')
+                ->with(compact('service_link'))
+                ->with(compact('packages'))
+                ->with(compact('ads'))
+                ->with(compact('menus'));
         }
         $menus              = Menu::whereStatus(1)->get();
         $service_link       = Service::select('title' , 'slug')->get();
@@ -58,37 +81,47 @@ class ReservationController extends Controller
             ->with(compact('menus'));
     }
 
-    public function reservset(reservationrequest $request){
-        $reserations = new Reseration();
+    public function reservset(Request $request){
 
-        $reserations->user_id           = $request->input('user_id');
-        $reserations->service_id        = $request->input('service_id');
-        $reserations->subservice_id     = $request->input('subservice_id');
-        $reserations->dateset           = $request->input('dateset');
+        if(!auth::check()){
+            return redirect('register');
+        }else {
+            $reserations = new Reseration();
 
-        $reserations->save();
+            $reserations->user_id       = auth::user()->id ;
+            $reserations->service_id    = $request->input('service_id');
+            $reserations->subservice_id = $request->input('subservice_id');
+            $reserations->dateset       = $request->input('dateset');
 
-        $user = User::whereId($request->input('user_id'))->first();
-        $dateset = $request->input('dateset');
-        $user->notify(new SendSmsNotification($dateset ,  $user->phone , $user->name));
+            $reserations->save();
 
-        return back();
+            $user = User::whereId( Auth::user()->id)->first();
+            $dateset = $request->input('dateset');
+            $user->notify(new SendSmsNotification($dateset, $user->phone, $user->name));
+
+            return back();
+        }
     }
 
-    public function packageset(reservationrequest $request){
-        $reserations = new Reseration();
+    public function packageset(Request $request){
 
-        $reserations->user_id              = $request->input('user_id');
-        $reserations->package_id           = $request->input('package_id');
+        if(!auth::check()){
+            return redirect('register');
+        }else {
+            $reserations = new Reseration();
 
-        $reserations->save();
+            $reserations->user_id = Auth::user()->id;
+            $reserations->package_id = $request->input('package_id');
 
-        $user = User::whereId($request->input('user_id'))->first();
-        $packages = Package::whereId($request->input('package_id'))->first();
+            $reserations->save();
 
-        $user->notify(new SendSmsNotification($packages->title ,  $user->phone , $user->name));
+            $user = User::whereId(Auth::user()->id)->first();
+            $packages = Package::whereId($request->input('package_id'))->first();
 
-        return redirect('reservation');
+            $user->notify(new SendSmsNotification($packages->title, $user->phone, $user->name));
+
+            return redirect('reservation');
+        }
     }
 
     public function serviceoption(Request $request){

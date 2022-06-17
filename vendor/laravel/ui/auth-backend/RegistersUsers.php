@@ -6,6 +6,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 trait RegistersUsers
 {
@@ -51,9 +52,11 @@ trait RegistersUsers
 
     public function registeruser(Request $request)
     {
+
         $this->validatoruser($request->all())->validate();
         event(new Registered($user = $this->createuser($request->all())));
-        return redirect('login');
+        $this->guard()->login($user);
+        return \redirect('reservation');
 
     }
     /**

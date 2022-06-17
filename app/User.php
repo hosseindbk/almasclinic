@@ -43,6 +43,10 @@ class User extends Authenticatable
     {
         return $this->level == 'admin' ? true : false;
     }
+    public function isUser()
+    {
+        return $this->level == 'user' ? true : false;
+    }
 
     public function roles(){
         return $this->belongsToMany(Role::class);

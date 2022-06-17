@@ -40,9 +40,7 @@ Route::group(['namespace' => 'Site'] , function (){
     Route::post('reservation'               , 'ReservationController@reservset')->name('reservation-set');
     Route::post('packageset'                , 'ReservationController@packageset')->name('package-set');
     Route::post('reservation/serviceoption' , 'ReservationController@serviceoption')->name('serviceoption');
-    Route::delete('reservation/delete/{id}'     , 'ReservationController@deletreserve')->name('deletereserve');
-    Route::resource('rezerve'           , 'RezerveController');
-
+    Route::delete('reservation/delete/{id}' , 'ReservationController@deletreserve')->name('deletereserve');
     Route::get('customers'                  , 'IndexController@customer');
     Route::post('counter'                   , 'IndexController@counter')->name('counter');
 });

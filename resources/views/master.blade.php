@@ -161,7 +161,7 @@
     </div>
     <br>
     <div class="bg-whatsapp" style="background-color: #be00f8;border-radius: 15px;padding: 3px 12px;">
-        <a href="{{url('/')}}" style="color: #fff;">
+        <a href="{{url('reservation')}}" style="color: #fff;">
             رزرو آنلاین
         </a>
     </div>

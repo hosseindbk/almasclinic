@@ -21,7 +21,6 @@
                     <div class="col-md-12">
                         @foreach($packages as $package)
                             <input type="hidden" name="package_id" value="{{$package->id}}" >
-                            <input type="hidden" name="user_id" value="{{Auth::user()->id}}" >
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <div class="prising-card pric-tabe" style="height: 470px;">
                                     <div class="price-header text-center">
@@ -81,35 +80,4 @@
         </div>
     </div>
 </div>
-@endsection
-@section('script')
-    <script>
-        $(function(){
-            $('#service_id').change(function(){
-                $("#subservice_id option").remove();
-                var id = $('#service_id').val();
-
-                $.ajax({
-                    url : '{{ route( 'serviceoption' ) }}',
-                    data: {
-                        "_token": "{{ csrf_token() }}",
-                        "id": id
-                    },
-                    type: 'post',
-                    dataType: 'json',
-                    success: function( result )
-                    {
-                        $.each( result, function(k, v) {
-                            $('#subservice_id').append($('<option>', {value:k, text:v}));
-                        });
-                    },
-                    error: function()
-                    {
-                        //handle errors
-                        alert('error...');
-                    }
-                });
-            });
-        });
-    </script>
 @endsection
