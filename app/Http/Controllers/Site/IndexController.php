@@ -93,4 +93,18 @@ class IndexController extends Controller
             ->with(compact('ads'))
             ->with(compact('menus'));
     }
+
+    public function packageservice(){
+        $menus          = Menu::whereStatus(1)->get();
+        $packages       = Package::all();
+        $service_link   = Service::select('title' , 'slug')->get();
+        $ads            = Ads::all();
+        $medias         = Media::latest()->paginate(12);
+        return view('Site.packageservice')
+            ->with(compact('packages'))
+            ->with(compact('service_link'))
+            ->with(compact('medias'))
+            ->with(compact('ads'))
+            ->with(compact('menus'));
+    }
 }

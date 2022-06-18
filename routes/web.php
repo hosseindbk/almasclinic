@@ -37,6 +37,7 @@ Route::group(['namespace' => 'Site'] , function (){
     Route::get('aboutus'                    , 'IndexController@aboutus');
     Route::get('reservation'                , 'ReservationController@index');
     Route::get('package-service/{id}'       , 'ReservationController@packagereserve');
+    Route::get('packageservice'             , 'IndexController@packageservice');
     Route::post('reservation'               , 'ReservationController@reservset')->name('reservation-set');
     Route::post('packageset'                , 'ReservationController@packageset')->name('package-set');
     Route::post('reservation/serviceoption' , 'ReservationController@serviceoption')->name('serviceoption');
