@@ -50,9 +50,6 @@
                     </li>
                 @endforeach
             </ul>
-            <div class="nav-btn" style="margin: 10px">
-                <a href="tel:+989102205889" id="phonenumber" class="btn btn-secondary">مشاوره : 09102205889</a>
-            </div>
             @if(! Auth::check())
                 <div class="nav-btn">
                     <a href="{{url('login')}}" class="btn btn-secondary">ورود/عضویت</a>
