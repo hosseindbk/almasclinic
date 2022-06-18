@@ -80,7 +80,7 @@
                     <div class="row">
                         @foreach($packages as $package)
                             <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="prising-card pric-tabe" style="height: 470px;">
+                            <div class="prising-card pric-tabe">
                                 <div class="price-header text-center">
                                     <h3>{{$package->title}}</h3>
                                     <h4 class="demo"></h4>
