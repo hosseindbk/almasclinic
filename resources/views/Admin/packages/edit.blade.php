@@ -34,50 +34,12 @@
                         <div class="card custom-card">
                             <div class="card-body">
                                 <div>
-                                    <h3 class="text-center mb-5"><span class="badge badge-light">   @foreach($services as $service)  {{$service->title}} @endforeach</span></h3>
-                                </div>
-                                <div class="row row-sm">
-                                    @foreach($services as $service)
-                                    <div class="col-md-6">
-                                        <p> عنوان خدمات : {{$service->title}}</p>
-                                        <p> توضیحات : {!! $service->description !!}</p>
-                                    </div>
-                                        <div class="col-md-6">
-                                            <div style="width: 250px;float: left;border: 2px solid #dad8d8;border-radius: 15px;">
-                                                <img src="{{asset($service->images)}}" class="img-responsive" style="padding: 20px;" alt="">
-                                                @if($service->images != null)
-                                                    <div style="background: #efefef;text-align: center;padding: 5px;border-radius: 0px 0px 15px 15px;">
-                                                        <form action="{{ route('updateproimg', $service->id)}}" method="post">
-                                                            {{ method_field('patch') }}
-                                                            {{csrf_field()}}
-                                                            <div class="btn-group btn-group-xs">
-                                                                <button type="submit" class="btn btn-danger btn-xs">
-                                                                    <i class="fe fe-trash-2 "></i>
-                                                                </button>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                @endif
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-sm">
-                    <div class="col-lg-12 col-md-12">
-                        <div class="card custom-card">
-                            <div class="card-body">
-                                <div>
-                                    <a aria-controls="collapseExample" aria-expanded="false" class="btn ripple btn-primary" data-toggle="collapse" href="#collapseExample" role="button">@foreach($services as $service) ویرایش اطلاعات {{$service->title}} @endforeach</a>
-                                    <div class="collapse mg-t-5" id="collapseExample">
+                                    <div class="collapse show mg-t-5" id="collapseExample">
                                         <div>
-                                            <h3 class="text-center mb-5"><span class="badge badge-light">   @foreach($services as $service) ویرایش اطلاعات {{$service->title}} @endforeach</span></h3>
+                                            <h3 class="text-center mb-5"><span class="badge badge-light">   @foreach($packages as $package) ویرایش اطلاعات {{$package->title}} @endforeach</span></h3>
                                         </div>
-                                            @foreach($services as $service)
-                                            <form action="{{route('services.update', $service->id)}}" method="POST" enctype="multipart/form-data">
+                                            @foreach($packages as $package)
+                                            <form action="{{route('packages.update', $package->id)}}" method="POST" enctype="multipart/form-data">
                                                 <div class="row row-sm">
                                                     {{csrf_field()}}
                                                     {{ method_field('PATCH') }}
@@ -167,32 +129,5 @@
     <script src="{{asset('admin/assets/js/advanced-form-elements.js')}}"></script>
     <script src="{{asset('admin/assets/plugins/sumoselect/jquery.sumoselect.js')}}"></script>
     <script src="{{asset('admin/assets/plugins/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
-    <script src="{{asset('admin/assets/plugins/ckeditor/ckeditor.js')}}"></script>
-    <script>
-        ClassicEditor
-            .create( document.querySelector( '#editor' ) )
-            .catch( error => {
-                console.error( error );
-            } );
-    </script>
-    <script>
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-        (function($) {
-            //fancyfileuplod
-            $('#demo').FancyFileUpload({
-                params : {
-                    action : 'fileuploader',
-                    id:"{{$service->id}}",
-                    table:"service_id",
-                },
-                maxfilesize : 1000000
-            });
-        })(jQuery);
-
-    </script>
 @endsection
 @endsection

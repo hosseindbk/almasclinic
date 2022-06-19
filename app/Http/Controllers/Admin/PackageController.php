@@ -111,18 +111,18 @@ class PackageController extends Controller
      */
     public function update(Request $request, Package $package)
     {
-        $packages->title            = $request->input('title');
-        $packages->dis1             = $request->input('dis1');
-        $packages->dis2             = $request->input('dis2');
-        $packages->dis3             = $request->input('dis3');
-        $packages->dis4             = $request->input('dis4');
-        $packages->dis5             = $request->input('dis5');
-        $packages->dis6             = $request->input('dis6');
-        $packages->price            = $request->input('price');
-        $packages->offprice         = $request->input('offprice');
+        $package->title            = $request->input('title');
+        $package->dis1             = $request->input('dis1');
+        $package->dis2             = $request->input('dis2');
+        $package->dis3             = $request->input('dis3');
+        $package->dis4             = $request->input('dis4');
+        $package->dis5             = $request->input('dis5');
+        $package->dis6             = $request->input('dis6');
+        $package->price            = $request->input('price');
+        $package->offprice         = $request->input('offprice');
         $package->update();
         alert()->success('عملیات موفق', 'اطلاعات با موفقیت ثبت شد');
-        return Redirect::back();
+        return redirect(route('packages.index'));
     }
 
     /**
