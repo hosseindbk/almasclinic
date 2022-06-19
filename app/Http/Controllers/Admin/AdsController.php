@@ -115,9 +115,7 @@ class AdsController extends Controller
     {
         $ad = Ads::findOrfail($id);
 
-        $ad->title             = $request->input('title');
         $ad->url               = $request->input('url');
-        $ad->position          = $request->input('position');
 
         if ($request->input('status') == 'on') {
             $ad->status = 1;
@@ -127,17 +125,19 @@ class AdsController extends Controller
         }
 
         if ($request->file('image') != null) {
+
             $file = $request->file('image');
             $img = Image::make($file);
             $imagePath ="image/ad/";
+            $extension = $file->getClientOriginalExtension();
             $imageName = md5(uniqid(rand(), true)) . $file->getClientOriginalName();
             $ad->image = $file->move($imagePath, $imageName);
             $img->save($imagePath.$imageName);
-            $img->encode('jpg');
+            $img->encode($extension);
         }
         $ad->update();
         alert()->success('عملیات موفق', 'اطلاعات با موفقیت ثبت شد');
-        return Redirect::back();
+        return redirect(route('ads.index'));
     }
 
     /**
