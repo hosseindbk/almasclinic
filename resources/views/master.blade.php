@@ -164,7 +164,12 @@
     </div>
 </div>
 <div class="call-banner d-none d-sm-block" style="display: inline;bottom: 25%;right: 0px;position: fixed;z-index: 99999999;">
-    <div class="bg-banner" style="background-color: #be00f8;padding: 3px 12px;">
+    <div id="ads-right-top" class="bg-banner ads-right-top-open">
+        <div class="col-1" style="float: left;background-color: #f6f4ff;border-radius: 0px 10px 10px 0px;cursor: pointer;color: #000;margin-left: -12px;padding-left: 20px;font-size: 1.2rem;padding-top: 3px;">
+            <a id="close-right-top" >
+                <i class="las la-arrow-right bg-1"></i>
+            </a>
+        </div>
         @foreach($ads as $ad)
             @if($ad->position == 2)<a href="{{url($ad->url)}}">
                 <div style="text-align: center">
@@ -178,7 +183,12 @@
         @endforeach
     </div>
     <br>
-    <div class="bg-banner" style="background-color: #be00f8;padding: 3px 12px;">
+    <div id="ads-right-bottom" class="bg-banner ads-right-bottom-open">
+        <div class="col-1" style="float: left;background-color: #f6f4ff;border-radius: 0px 10px 10px 0px;cursor: pointer;color: #000;margin-left: -12px;padding-left: 20px;font-size: 1.2rem;padding-top: 3px;">
+            <a id="close-right-bottom" >
+                <i class="las la-arrow-right bg-1"></i>
+            </a>
+        </div>
         @foreach($ads as $ad)
             @if($ad->position == 2)<a href="{{url($ad->url)}}">
                 <div style="text-align: center">
@@ -192,22 +202,6 @@
         @endforeach
     </div>
 </div>
-{{--<div class="call-banner d-none d-sm-block" style="display: inline;bottom: 380px;right: 0px;position: fixed;z-index: 99999999;">--}}
-{{--    <div class="bg-banner" style="background-color: #be00f8;padding: 3px 12px;">--}}
-{{--        @foreach($ads as $ad)--}}
-{{--            @if($ad->position == 2)<a href="{{url($ad->url)}}">--}}
-{{--                <div style="text-align: center">--}}
-{{--                    <p style="color: #fff;text-align: center;padding: 20px 2px;">{{$ad->title}}</p>--}}
-{{--                </div>--}}
-{{--                <div style="text-align: center">--}}
-{{--                    <img src="{{asset($ad->image)}}" style="width: 100px" alt="">--}}
-{{--                </div>--}}
-{{--            </a>--}}
-{{--            @endif--}}
-{{--        @endforeach--}}
-{{--    </div>--}}
-{{--</div>--}}
-
 <div class="row">
     <div class="container">
         <div class="col-1"></div>
@@ -215,13 +209,19 @@
             @foreach($ads as $ad)
                 @if($ad->position == 1)
 
-                    <a href="{{url($ad->url)}}">
-                        <div style="position: fixed;bottom: 0;height: 70px;background: #be00f8d9;right: 0;left: 0;margin: 0 auto;z-index: 1;">
-                            <div class="col-4" style="float: right"><img src="{{asset($ad->image)}}" alt="" style="height: 70px"></div>
-                            <div class="col-8" style="float: left"><p style="color: #fff;text-align: center;margin: 15px;">{{$ad->title}}</p></div>
-                        </div>
-                    </a>
 
+
+                        <div id="ads-bottom" class="ads-bottom-open">
+                            <div class="col-1" style="float: left;left: 0;width: 30px;background-color: #fefefe;border-radius: 0px 0px 10px 10px;text-align: center;margin-left: 2%;padding: 5px;cursor: pointer;color: #000;">
+                                <a id="close-bottom" >
+                                    <i class="las la-arrow-down bg-1"></i>
+                                </a>
+                            </div>
+                            <a href="{{url($ad->url)}}">
+                                <div class="col-4" style="float: right"><img src="{{asset($ad->image)}}" alt="" style="height: 70px"></div>
+                                <div class="col-7" style="float: left"><p style="color: #fff;text-align: center;margin: 15px;">{{$ad->title}}</p></div>
+                            </a>
+                        </div>
                 @endif
             @endforeach
         </div>
@@ -241,7 +241,20 @@
 <script src="{{asset('site/js/persianumber.js')}}"></script>
 <script src="{{asset('site/js/jquery.ajaxchimp.min.js')}}"></script>
 <script src="{{asset('site/js/custom.js')}}"></script>
-
+<script>
+    $("#close-bottom").click(function() {
+        $('#ads-bottom').removeClass('ads-bottom-open');
+        $('#ads-bottom').addClass('ads-bottom-close');
+    });
+    $("#close-right-bottom").click(function() {
+        $('#ads-right-bottom').removeClass('ads-right-bottom-open');
+        $('#ads-right-bottom').addClass('ads-right-bottom-close');
+    });
+    $("#close-right-top").click(function() {
+        $('#ads-right-top').removeClass('ads-right-top-open');
+        $('#ads-right-top').addClass('ads-right-top-close');
+    });
+</script>
 <script>
     $(document).ready(function(){
         $('.demo').persiaNumber();

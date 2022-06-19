@@ -3986,3 +3986,28 @@ p:last-child {
         transform: translate(0px, 0px) rotate(0deg)
     }
 }
+.ads-bottom-open{
+    position: fixed;
+    bottom: 0;
+    height: 70px;
+    background: #be00f8d9;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 1;
+}
+.ads-bottom-close{
+    display: none;
+}
+.ads-right-top-open{
+    background-color: #be00f8;padding: 3px 12px;
+}
+.ads-right-top-close{
+    display: none;
+}
+.ads-right-bottom-open{
+    background-color: #be00f8;padding: 3px 12px;
+}
+.ads-right-bottom-close{
+    display: none;
+}
