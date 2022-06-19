@@ -173,10 +173,7 @@
         @foreach($ads as $ad)
             @if($ad->position == 2)<a href="{{url($ad->url)}}">
                 <div style="text-align: center">
-                    <p style="color: #fff;text-align: center;padding: 20px 2px;">{{$ad->title}}</p>
-                </div>
-                <div style="text-align: center">
-                    <img src="{{asset($ad->image)}}" style="width: 100px" alt="">
+                    <img src="{{asset($ad->image)}}" style="width: 200px" alt="">
                 </div>
             </a>
             @endif
@@ -192,10 +189,7 @@
         @foreach($ads as $ad)
             @if($ad->position == 2)<a href="{{url($ad->url)}}">
                 <div style="text-align: center">
-                    <p style="color: #fff;text-align: center;padding: 20px 2px;">{{$ad->title}}</p>
-                </div>
-                <div style="text-align: center">
-                    <img src="{{asset($ad->image)}}" style="width: 100px" alt="">
+                    <img src="{{asset($ad->image)}}" style="width: 200px" alt="">
                 </div>
             </a>
             @endif
@@ -208,18 +202,14 @@
         <div class="col-10">
             @foreach($ads as $ad)
                 @if($ad->position == 1)
-
-
-
                         <div id="ads-bottom" class="ads-bottom-open">
-                            <div class="col-1" style="float: left;left: 0;width: 30px;background-color: #fefefe;border-radius: 0px 0px 10px 10px;text-align: center;margin-left: 2%;padding: 5px;cursor: pointer;color: #000;">
+                            <div class="col-1" style="float: left;left: 0;width: 30px;background-color: #fefefe;border-radius: 0px 0px 10px 10px;text-align: center;margin-left: 2%;padding: 5px;cursor: pointer;color: #000;position: absolute;">
                                 <a id="close-bottom" >
                                     <i class="las la-arrow-down bg-1"></i>
                                 </a>
                             </div>
                             <a href="{{url($ad->url)}}">
-                                <div class="col-4" style="float: right"><img src="{{asset($ad->image)}}" alt="" style="height: 70px"></div>
-                                <div class="col-7" style="float: left"><p style="color: #fff;text-align: center;margin: 15px;">{{$ad->title}}</p></div>
+                                <div class="col-12" style="text-align: center;"><img src="{{asset($ad->image)}}" alt="" style="height: 70px"></div>
                             </a>
                         </div>
                 @endif
