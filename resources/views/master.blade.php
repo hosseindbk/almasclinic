@@ -199,7 +199,7 @@
 
             @foreach($ads as $ad)
                 @if($ad->position == 1)
-                    <b id="close-bottom" style="float: left;left: 0;width: 30px;background-color: #fefefe;border-radius: 0px 0px 10px 10px;text-align: center;margin-left: 2%;padding: 5px;cursor: pointer;color: #000;position: absolute;">
+                    <b id="close-bottom" style="float: left;left: 0;width: 30px;background-color: #fefefe;border-radius: 0px 0px 10px 10px;text-align: center;margin-left: 25%;padding: 5px;cursor: pointer;color: #000;position: absolute;z-index: 9999999;margin-top: -70px;">
                         <i class="las la-arrow-down bg-1"></i>
                     </b>
                         <a href="{{url($ad->url)}}">
