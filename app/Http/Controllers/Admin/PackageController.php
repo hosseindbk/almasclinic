@@ -55,21 +55,17 @@ class PackageController extends Controller
     {
         $packages = new Package();
 
-        $packages->title             = $request->input('title');
-        $packages->status               = '1';
-        $packages->description          = $request->input('description');
-        $packages->date                 = jdate()->format('Ymd ');
-        $packages->user_id              = Auth::user()->id;
+        $packages->title            = $request->input('title');
+        $packages->dis1             = $request->input('dis1');
+        $packages->dis2             = $request->input('dis2');
+        $packages->dis3             = $request->input('dis3');
+        $packages->dis4             = $request->input('dis4');
+        $packages->dis5             = $request->input('dis5');
+        $packages->dis6             = $request->input('dis6');
+        $packages->price            = $request->input('price');
+        $packages->offprice         = $request->input('offprice');
+        $packages->status           = '4';
 
-        if ($request->file('images') != null) {
-            $file = $request->file('images');
-            $img = Image::make($file);
-            $imagePath ="image/service/";
-            $imageName = md5(uniqid(rand(), true)) . $file->getClientOriginalName();
-            $packages->images = $file->move($imagePath, $imageName);
-            $img->save($imagePath.$imageName);
-            $img->encode('jpg');
-        }
         $packages->save();
 
         alert()->success('عملیات موفق', 'اطلاعات با موفقیت ثبت شد');
@@ -115,27 +111,15 @@ class PackageController extends Controller
      */
     public function update(Request $request, Package $package)
     {
-        $package->title             = $request->input('title');
-        $package->description       = $request->input('description');
-        $package->date              = jdate()->format('Ymd ');
-        $package->user_id           = Auth::user()->id;
-
-        if ($request->input('status') == 'on') {
-            $package->status = 1;
-        }
-        if ($request->input('status') == null) {
-            $package->status = 0;
-        }
-
-        if ($request->file('images') != null) {
-            $file = $request->file('images');
-            $img = Image::make($file);
-            $imagePath ="image/service/";
-            $imageName = md5(uniqid(rand(), true)) . $file->getClientOriginalName();
-            $package->images = $file->move($imagePath, $imageName);
-            $img->save($imagePath.$imageName);
-            $img->encode('jpg');
-        }
+        $packages->title            = $request->input('title');
+        $packages->dis1             = $request->input('dis1');
+        $packages->dis2             = $request->input('dis2');
+        $packages->dis3             = $request->input('dis3');
+        $packages->dis4             = $request->input('dis4');
+        $packages->dis5             = $request->input('dis5');
+        $packages->dis6             = $request->input('dis6');
+        $packages->price            = $request->input('price');
+        $packages->offprice         = $request->input('offprice');
         $package->update();
         alert()->success('عملیات موفق', 'اطلاعات با موفقیت ثبت شد');
         return Redirect::back();
