@@ -20,7 +20,7 @@ class IndexController extends Controller
         $services       = Service::whereStatus(1)->whereHome(1)->limit(9)->get();
         $service_link   = Service::select('title' , 'slug')->get();
         $blogs          = Blog::all();
-        $ads            = Ads::all();
+        $ads            = Ads::whereStatus(1)->get();
 
         return view('Site.index')
             ->with(compact('service_link'))
@@ -34,7 +34,7 @@ class IndexController extends Controller
         $services       = Service::all();
         $service_link   = Service::select('title' , 'slug')->get();
         $menus          = Menu::whereStatus(1)->get();
-        $ads            = Ads::all();
+        $ads            = Ads::whereStatus(1)->get();
 
 
         return view('Site.service')
@@ -57,7 +57,7 @@ class IndexController extends Controller
         $service_link   = Service::select('title' , 'slug')->get();
         $medias         = Media::whereServiceId($service_id)->get();
         $menus          = Menu::whereStatus(1)->get();
-        $ads            = Ads::all();
+        $ads            = Ads::whereStatus(1)->get();
 
 
         return view('Site.singleservice')
@@ -71,7 +71,7 @@ class IndexController extends Controller
     public function aboutus(){
         $menus          = Menu::whereStatus(1)->get();
         $service_link   = Service::select('title' , 'slug')->get();
-        $ads            = Ads::all();
+        $ads            = Ads::whereStatus(1)->get();
 
 
         return view('Site.aboutus')
@@ -84,7 +84,7 @@ class IndexController extends Controller
         $menus          = Menu::whereStatus(1)->get();
         $services       = Service::all();
         $service_link   = Service::select('title' , 'slug')->get();
-        $ads            = Ads::all();
+        $ads            = Ads::whereStatus(1)->get();
         $medias         = Media::latest()->paginate(12);
         return view('Site.customer')
             ->with(compact('service_link'))
@@ -98,7 +98,7 @@ class IndexController extends Controller
         $menus          = Menu::whereStatus(1)->get();
         $packages       = Package::all();
         $service_link   = Service::select('title' , 'slug')->get();
-        $ads            = Ads::all();
+        $ads            = Ads::whereStatus(1)->get();
         $medias         = Media::latest()->paginate(12);
         return view('Site.packageservice')
             ->with(compact('packages'))

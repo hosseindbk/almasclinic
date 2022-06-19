@@ -36,10 +36,21 @@
                         <div class="card custom-card">
                             <div class="card-body">
                                 <div>
-                                    <a aria-controls="collapseExample" aria-expanded="false" class="btn ripple btn-primary" data-toggle="collapse" href="#collapseExample" role="button">@foreach($ads as $ad) ویرایش اطلاعات {{$ad->title}} @endforeach</a>
-                                    <div class="collapse mg-t-5" id="collapseExample">
+                                    <div class="collapse show mg-t-5">
                                         <div>
-                                            <h3 class="text-center mb-5"><span class="badge badge-light">   @foreach($ads as $ad) ویرایش اطلاعات {{$ad->title}} @endforeach</span></h3>
+                                            <h3 class="text-center mb-5">
+                                                <span class="badge badge-light">
+                                                    @foreach($ads as $ad) ویرایش آگهی تبلیغاتی
+                                                        @if($ad->position == 1)
+                                                            پایین صفحه
+                                                        @elseif($ad->position == 2)
+                                                            سمت راست
+                                                        @elseif($ad->position == 3)
+                                                            سمت چپ
+                                                        @endif
+                                                    @endforeach
+                                                </span>
+                                            </h3>
                                         </div>
                                             @foreach($ads as $ad)
                                             <form action="{{route('ads.update', $ad->id)}}" method="POST" enctype="multipart/form-data">
@@ -49,36 +60,19 @@
                                                     <div class="col-md-12">
                                                         @include('error')
                                                     </div>
-                                                    <div class="col-md-3">
+                                                    <div class="col-md-4">
                                                         <div class="form-group">
-                                                            <p class="mg-b-10">متن تبلیغ</p>
-                                                            <input type="text" name="title" required value="{{$ad->title}}"  placeholder="متن را وارد کنید" class="form-control" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <p class="mg-b-10">موقعیت</p>
-                                                            <select name="position" class="form-control select2">
-                                                                <option value="1" {{$ad->postition == 1 ? 'selected' : ''}}>تبلیغ پایین</option>
-                                                                <option value="2" {{$ad->postition == 2 ? 'selected' : ''}}>تبلیغ راست</option>
-                                                                <option value="3" {{$ad->postition == 3 ? 'selected' : ''}}>تبلیغ چپ</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <p class="mg-b-10">ادرس صفحه</p>
+                                                            <p class="mg-b-10">آدرس صفحه</p>
                                                             <input type="text" name="url"  value="{{$ad->url}}" placeholder="ادرس صفحه را وارد کنید" class="form-control" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-3">
+                                                    <div class="col-md-4">
                                                         <div class="form-group">
                                                             <p class="mg-b-10">تصویر اصلی </p>
                                                             <input type="file" name="image" class="dropify" data-height="200">
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-12">
+                                                    <div class="col-md-4">
                                                         <div class="form-group">
                                                             <p class="mb-2">نمایش/عدم نمایش</p>
                                                             <label class="custom-switch">

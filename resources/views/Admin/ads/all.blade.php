@@ -25,7 +25,7 @@
                             <div class="card-body">
                                 <div>
                                     <h6 class="main-content-label mb-1">لیست تبلیغات </h6>
-                                    <a href="{{url('admin/ads/create')}}" class="btn btn-primary btn-xs">افزودن تبلیغات جدید</a>
+                                    @if(Auth::user()->username == 'hosseindbk') <a href="{{url('admin/ads/create')}}" class="btn btn-primary btn-xs">افزودن تبلیغات جدید</a> @endif
                                 </div>
 
                                 <div class="table-responsive">
@@ -34,11 +34,10 @@
                                         <tr>
                                             <th class="wd-10p"> ردیف </th>
                                             <th class="wd-10p"> تصویر </th>
-                                            <th class="wd-10p"> متن </th>
                                             <th class="wd-10p"> موقعیت </th>
                                             <th class="wd-10p"> وضعیت </th>
                                             <th class="wd-10p"> تغییر </th>
-                                            <th class="wd-10p"> حذف </th>
+                                            @if(Auth::user()->username == 'hosseindbk')    <th class="wd-10p"> حذف </th> @endif
 
                                         </tr>
                                         </thead>
@@ -50,12 +49,10 @@
                                                     <img src="{{asset($ad->image)}}" class="img-responsive" style="display: block" width="30" alt="">
                                                 </td>
 
-                                                <td>  {{$ad->title}}  </td>
-
                                                 <td>
 
                                                     @if($ad->position == 1)
-                                                        <button class="btn ripple btn-outline-danger">پایین صفحه</button>
+                                                        <button class="btn ripple btn-outline-success">پایین صفحه</button>
                                                     @elseif($ad->position == 2)
                                                         <button class="btn ripple btn-outline-success">سمت راست</button>
                                                     @elseif($ad->position == 3)
@@ -80,17 +77,19 @@
                                                         </a>
                                                     </div>
                                                 </td>
-                                                <td>
-                                                    <form action="{{ route('ads.destroy' , $ad->id) }}" method="post">
-                                                        {{ method_field('delete') }}
-                                                        {{ csrf_field() }}
-                                                        <div class="btn-icon-list">
-                                                            <button type="submit" class="btn ripple btn-outline-danger btn-icon">
-                                                                <i class="fe fe-trash-2 "></i>
-                                                            </button>
-                                                        </div>
-                                                    </form>
-                                                </td>
+                                                @if(Auth::user()->username == 'hosseindbk')
+                                                    <td>
+                                                        <form action="{{ route('ads.destroy' , $ad->id) }}" method="post">
+                                                            {{ method_field('delete') }}
+                                                            {{ csrf_field() }}
+                                                            <div class="btn-icon-list">
+                                                                <button type="submit" class="btn ripple btn-outline-danger btn-icon">
+                                                                    <i class="fe fe-trash-2 "></i>
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                @endif
                                             </tr>
                                         @endforeach
                                         </tbody>

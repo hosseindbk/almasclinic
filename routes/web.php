@@ -17,7 +17,8 @@ Route::group(['namespace' => 'Admin' , 'middleware' => ['auth:web' , 'checkAdmin
     Route::resource('services'          , 'ServiceController');
     Route::resource('subservices'       , 'SubserviceController');
     Route::resource('reservations'      , 'ReservationController');
-    Route::resource('packages'           , 'PackageController');
+    Route::resource('packages'          , 'PackageController');
+    Route::resource('ads'               , 'AdsController');
     Route::delete('reservation/delete/{id}'     , 'ReservationController@deletreserve')->name('delete-reserve');
 
     Route::post('services/{id}/img'           , 'MediaController@imgupload');
