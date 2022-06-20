@@ -22,13 +22,28 @@ class ReservationController extends Controller
 
         if(! Auth::check()){
             $menus          = Menu::whereStatus(1)->get();
-            $services       = Service::whereStatus(1)->get();
+            $packages       = Package::whereStatus('4')->select('id' , 'title')->get();
+            $services       = Service::whereStatus(1)->select('id' , 'title')->get();
+
+            foreach ($packages as $package)
+                $items[] = [
+                    'id' => $package->id,
+                    'title' => $package->title,
+                ];
+
+            foreach ($services as $service)
+                $items[] = [
+                    'id' => $service->id,
+                    'title' => $service->title,
+                ];
+
             $service_link   = Service::select('title' , 'slug')->get();
             $subservices    = Subservice::whereStatus(1)->get();
             $packages       = Package::whereStatus(1)->get();
             $ads            = Ads::all();
 
             return view('Site.reservation')
+                ->with(compact('items'))
                 ->with(compact('service_link'))
                 ->with(compact('packages'))
                 ->with(compact('subservices'))

@@ -47,8 +47,8 @@
                             <p class="mg-b-10">نوع خدمات</p>
                             <select name="service_id" id="service_id" class="form-control select2">
                                 <option value="" >یکی را انتخاب کنید</option>
-                            @foreach($services as $service)
-                                    <option value="{{$service->id}}" >{{$service->title}}</option>
+                            @foreach($items as $item)
+                                    <option value="{{$item['id']}}" >{{$item['title']}}</option>
                                 @endforeach
                             </select>
                         </div>
