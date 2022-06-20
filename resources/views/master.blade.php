@@ -165,59 +165,34 @@
 </div>
 <div class="call-banner d-none d-sm-block" style="display: inline;bottom: 25%;right: 0px;position: fixed;z-index: 99999999;">
     <div id="ads-right-top" class="bg-banner ads-right-top-open">
-        <div class="col-1" style="float: left;background-color: #f6f4ff;border-radius: 0px 10px 10px 0px;cursor: pointer;color: #000;margin-left: -12px;padding-left: 20px;font-size: 1.2rem;padding-top: 3px;">
-            <a id="close-right-top" >
-                <i class="las la-arrow-right bg-1"></i>
-            </a>
+        <div style="background-color: #f6f4ff;cursor: pointer;color: #000;font-size: 1.2rem;text-align: center;width: 50px;">
+            <a id="close-right-top" >بستن</a>
         </div>
         @foreach($ads as $ad)
-            @if($ad->position == 2)<a href="{{url($ad->url)}}">
-                <div style="text-align: center">
+            @if($ad->position == 2)
+                <a href="{{url($ad->url)}}">
                     <img src="{{asset($ad->image)}}" style="width: 200px" alt="">
-                </div>
-            </a>
+                </a>
             @endif
         @endforeach
     </div>
     <br>
-    <div id="ads-right-bottom" class="bg-banner ads-right-bottom-open">
-        <div class="col-1" style="float: left;background-color: #f6f4ff;border-radius: 0px 10px 10px 0px;cursor: pointer;color: #000;margin-left: -12px;padding-left: 20px;font-size: 1.2rem;padding-top: 3px;">
-            <a id="close-right-bottom" >
-                <i class="las la-arrow-right bg-1"></i>
-            </a>
-        </div>
-        @foreach($ads as $ad)
-            @if($ad->position == 2)<a href="{{url($ad->url)}}">
-                <div style="text-align: center">
-                    <img src="{{asset($ad->image)}}" style="width: 200px" alt="">
+</div>
+
+@foreach($ads as $ad)
+    @if($ad->position == 1)
+            <div id="ads-bottom" class="ads-bottom-open">
+                <div class="col-12" style="padding: 6px;cursor: pointer;color: #000;z-index: 1;">
+                    <a id="close-bottom" style="background-color: #fff;padding: 5px 10px;margin-right: 50%;">
+                        X
+                    </a>
                 </div>
-            </a>
-            @endif
-        @endforeach
-    </div>
-</div>
-<div class="row">
-    <div class="container">
-        <div class="col-1"></div>
-        <div class="col-10">
-            @foreach($ads as $ad)
-                @if($ad->position == 1)
-                        <div id="ads-bottom" class="ads-bottom-open">
-                            <div class="col-1" style="float: left;left: 0;width: 30px;background-color: #fefefe;border-radius: 0px 0px 10px 10px;text-align: center;margin-left: 2%;padding: 5px;cursor: pointer;color: #000;position: absolute;z-index: 1">
-                                <a id="close-bottom" >
-                                    <i class="las la-arrow-down bg-1"></i>
-                                </a>
-                            </div>
-                            <a href="{{url($ad->url)}}">
-                                <div class="col-12" style="text-align: center"><img src="{{asset($ad->image)}}" alt="" style="height: 70px"></div>
-                            </a>
-                        </div>
-                @endif
-            @endforeach
-        </div>
-        <div class="col-1"></div>
-    </div>
-</div>
+                <a href="{{url($ad->url)}}">
+                    <div class="col-12" style="text-align: center"><img src="{{asset($ad->image)}}" alt="" style="height: 70px"></div>
+                </a>
+            </div>
+    @endif
+@endforeach
 <script src="{{asset('site/js/jquery.min.js')}}"></script>
 <script src="{{asset('site/js/popper.min.js')}}"></script>
 <script src="{{asset('site/js/bootstrap.min.js')}}"></script>
