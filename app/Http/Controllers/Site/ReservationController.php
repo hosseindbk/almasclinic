@@ -59,7 +59,20 @@ class ReservationController extends Controller
             $reservations = Reseration::latest()->get();
             $ads = Ads::all();
 
+            foreach ($packages as $package)
+                $items[] = [
+                    'id' => $package->id,
+                    'title' => $package->title,
+                ];
+
+            foreach ($services as $service)
+                $items[] = [
+                    'id' => $service->id,
+                    'title' => $service->title,
+                ];
+
             return view('Site.reservation')
+                ->with(compact('items'))
                 ->with(compact('service_link'))
                 ->with(compact('packages'))
                 ->with(compact('subservices'))
