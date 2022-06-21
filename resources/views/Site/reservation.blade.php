@@ -12,7 +12,7 @@
     <title>رزرو وقت آنلاین کلینیک زیبایی الماس دکتر غلامرضا کریمی</title>
     <link href="{{asset('admin/assets/plugins/select2/css/select2.min.css')}}" rel="stylesheet">
     <link href="{{asset('admin/assets/plugins/spectrum-colorpicker/spectrum.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('admin/assets/css-rtl/style/style.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('admin/assets/css-rtl/style/style.css')}}">--}}
 
 
 @endsection
@@ -164,7 +164,7 @@
     <script src="{{asset('admin/assets/js/form-elements.js')}}"></script>
     <script src="{{asset('admin/assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js')}}"></script>
     <script src="{{asset('admin/assets/plugins/jquery.maskedinput/jquery.maskedinput.js')}}"></script>
-    <script src="{{asset('admin/assets/plugins/perfect-scrollbar/perfect-scrollbar.min-rtl.js')}}"></script>
+{{--    <script src="{{asset('admin/assets/plugins/perfect-scrollbar/perfect-scrollbar.min-rtl.js')}}"></script>--}}
     <script>
         $(function(){
             $('#service_id').change(function(){
