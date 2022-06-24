@@ -38,17 +38,22 @@
 
                 </div>
                 <div class="col-lg-6 hidden-sm d-none d-sm-block" style="text-align: left;padding: 56px 20px;">
-                    <img src="{{asset('images/service/1cb8ab8c3023513ac63b4b50487fba04cEAE154C2-65FE-4E5A-98CB-FF24A72D57D5.jpeg')}}" style="width: 50%;float: left;padding: 2px;" alt="">
-                    <img src="{{asset('images/service/1cb8ab8c3023513ac63b4b50487fba04cEAE154C2-65FE-4E5A-98CB-FF24A72D57D5.jpeg')}}" style="width: 50%;float: left;padding: 2px;" alt="">
-                    <img src="{{asset('images/service/1cb8ab8c3023513ac63b4b50487fba04cEAE154C2-65FE-4E5A-98CB-FF24A72D57D5.jpeg')}}" style="width: 50%;float: right;padding: 2px;" alt="">
-                    <img src="{{asset('images/service/1cb8ab8c3023513ac63b4b50487fba04cEAE154C2-65FE-4E5A-98CB-FF24A72D57D5.jpeg')}}" style="width: 50%;float: right;padding: 2px;" alt="">
+                    
+                    <img src="{{asset($service->image2)}}" style="width: 50%;float: left;padding: 2px;" alt="">
+                    <img src="{{asset($service->image3)}}" style="width: 50%;float: left;padding: 2px;" alt="">
 
-                    <img src="{{asset('images/service/ravesh.jpg')}}" style="width: 100%;float: right;margin-top: 50px;" alt="">
-                    <img src="{{asset('images/service/aa.jpg')}}" style="width: 100%;float: right;padding: 2px;margin-top: 30px" alt="">
-                    <img src="{{asset('images/service/asd.jpg')}}" style="width: 50%;float: right;padding: 2px;" alt="">
-                    <img src="{{asset('images/service/adf.jpg')}}" style="width: 50%;float: right;padding: 2px;" alt="">
-                    <img src="{{asset('images/service/qwe.jpg')}}" style="width: 50%;float: right;padding: 2px;" alt="">
-                    <img src="{{asset('images/service/ert.jpg')}}" style="width: 50%;float: right;padding: 2px;" alt="">
+                    <img src="{{asset($service->image4)}}" style="width: 50%;float: right;padding: 2px;" alt="">
+                    <img src="{{asset($service->image5)}}" style="width: 50%;float: right;padding: 2px;" alt="">
+
+                    <img src="{{asset($service->image6)}}" style="width: 100%;float: right;margin-top: 50px;" alt="">
+
+                    <img src="{{asset($service->image7)}}" style="width: 100%;float: right;margin-top: 30px;padding: 2px;" alt="">
+
+                    <img src="{{asset($service->image8)}}"  style="width: 50%;float: right;padding: 2px;" alt="">
+                    <img src="{{asset($service->image9)}}"  style="width: 50%;float: right;padding: 2px;" alt="">
+                    <img src="{{asset($service->image10)}}" style="width: 50%;float: right;padding: 2px;" alt="">
+                    <img src="{{asset($service->image11)}}" style="width: 50%;float: right;padding: 2px;" alt="">
+
                 </div>
                 <div class="col-lg-12 col-sm-12">
                     <div class="case-study-card text-center">
