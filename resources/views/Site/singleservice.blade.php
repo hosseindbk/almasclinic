@@ -38,21 +38,21 @@
 
                 </div>
                 <div class="col-lg-6 hidden-sm d-none d-sm-block" style="text-align: left;padding: 56px 20px;">
-                    
-                    <img src="{{asset($service->image2)}}" style="width: 50%;float: left;padding: 2px;" alt="">
-                    <img src="{{asset($service->image3)}}" style="width: 50%;float: left;padding: 2px;" alt="">
 
-                    <img src="{{asset($service->image4)}}" style="width: 50%;float: right;padding: 2px;" alt="">
-                    <img src="{{asset($service->image5)}}" style="width: 50%;float: right;padding: 2px;" alt="">
+                    <img src="{{asset($service->image2)}}" style="width: 50%;float: left;padding: 2px;" alt="{{$service->title}}">
+                    <img src="{{asset($service->image3)}}" style="width: 50%;float: left;padding: 2px;" alt="{{$service->title}}">
 
-                    <img src="{{asset($service->image6)}}" style="width: 100%;float: right;margin-top: 50px;" alt="">
+                    <img src="{{asset($service->image4)}}" style="width: 50%;float: right;padding: 2px;" alt="{{$service->title}}">
+                    <img src="{{asset($service->image5)}}" style="width: 50%;float: right;padding: 2px;" alt="{{$service->title}}">
 
-                    <img src="{{asset($service->image7)}}" style="width: 100%;float: right;margin-top: 30px;padding: 2px;" alt="">
+                    <img src="{{asset($service->image6)}}" style="width: 100%;float: right;margin-top: 50px;" alt="{{$service->title}}">
 
-                    <img src="{{asset($service->image8)}}"  style="width: 50%;float: right;padding: 2px;" alt="">
-                    <img src="{{asset($service->image9)}}"  style="width: 50%;float: right;padding: 2px;" alt="">
-                    <img src="{{asset($service->image10)}}" style="width: 50%;float: right;padding: 2px;" alt="">
-                    <img src="{{asset($service->image11)}}" style="width: 50%;float: right;padding: 2px;" alt="">
+                    <img src="{{asset($service->image7)}}" style="width: 100%;float: right;margin-top: 30px;padding: 2px;" alt="{{$service->title}}">
+
+                    <img src="{{asset($service->image8)}}"  style="width: 50%;float: right;padding: 2px;" alt="{{$service->title}}">
+                    <img src="{{asset($service->image9)}}"  style="width: 50%;float: right;padding: 2px;" alt="{{$service->title}}">
+                    <img src="{{asset($service->image10)}}" style="width: 50%;float: right;padding: 2px;" alt="{{$service->title}}">
+                    <img src="{{asset($service->image11)}}" style="width: 50%;float: right;padding: 2px;" alt="{{$service->title}}">
 
                 </div>
                 <div class="col-lg-12 col-sm-12">
