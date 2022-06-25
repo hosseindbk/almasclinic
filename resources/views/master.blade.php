@@ -211,10 +211,6 @@
         $('#ads-bottom').removeClass('ads-bottom-open');
         $('#ads-bottom').addClass('ads-bottom-close');
     });
-    $("#close-right-bottom").click(function() {
-        $('#ads-right-bottom').removeClass('ads-right-bottom-open');
-        $('#ads-right-bottom').addClass('ads-right-bottom-close');
-    });
     $("#close-right-top").click(function() {
         $('#ads-right-top').removeClass('ads-right-top-open');
         $('#ads-right-top').addClass('ads-right-top-close');
