@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{asset('site/css/rtl.css')}}">
     <link rel="icon" type="images/png" href="{{asset('site/images/logo.png')}}">
     <link rel="canonical" href="{{URL::current()}}" />
+    <script> !function (t, e, n) { t.yektanetAnalyticsObject = n, t[n] = t[n] || function () { t[n].q.push(arguments) }, t[n].q = t[n].q || []; var a = new Date, r = a.getFullYear().toString() + "0" + a.getMonth() + "0" + a.getDate() + "0" + a.getHours(), c = e.getElementsByTagName("script")[0], s = e.createElement("script"); s.id = "ua-script-I1LoHPvk"; s.dataset.analyticsobject = n; s.async = 1; s.type = "text/javascript"; s.src = "https://cdn.yektanet.com/rg_woebegone/scripts_v3/I1LoHPvk/rg.complete.js?v=" + r, c.parentNode.insertBefore(s, c) }(window, document, "yektanet"); </script>
     <meta name="ahrefs-site-verification" content="abfb467b50f7408c06e4937eaa760a8bbb8000ae898cdacd4760b68123c4d157">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
