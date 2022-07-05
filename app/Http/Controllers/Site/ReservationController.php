@@ -83,6 +83,7 @@ class ReservationController extends Controller
                 ->with(compact('menus'));
         }
     }
+
     public function packagereserve($id){
         if(! Auth::check()){
             $menus              = Menu::whereStatus(1)->get();
@@ -118,8 +119,12 @@ class ReservationController extends Controller
             $reserations = new Reseration();
 
             $reserations->user_id       = auth::user()->id ;
-            $reserations->service_id    = $request->input('service_id');
-            $reserations->subservice_id = $request->input('subservice_id');
+            if($request->input('service_id') < 3000) {
+                $reserations->service_id = $request->input('service_id');
+                $reserations->subservice_id = $request->input('subservice_id');
+            }else{
+                $reserations->package_id = $request->input('service_id');
+            }
             $reserations->dateset       = $request->input('dateset');
 
             $reserations->save();
@@ -167,6 +172,7 @@ class ReservationController extends Controller
 
         return $output1;
     }
+
     public function deletreserve(Request $request , $id){
         $reserations = Reseration::findOrfail($id);
         $reserations->delete();
